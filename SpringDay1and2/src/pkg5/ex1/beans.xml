@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="emp1" class="pkg5.ex1.Employee" >
+		<property name="eid" value="A001" />
+		<property name="name" value="Ram kumar" />
+		<property name="salary" value="4000.00" />
+	</bean>
+	
+	<bean id="emp2" class="pkg5.ex1.Employee" >
+		<property name="eid" value="A002" />
+		<property name="name" value="Ram kumar" />
+		<property name="salary" value="4000.00" />
+	</bean>
+<bean id="emp3" class="pkg5.ex1.Employee" >
+		<property name="eid" value="A003" />
+		<property name="name" value="Ram kumar" />
+		<property name="salary" value="4000.00" />
+	</bean>
+	
+	<bean id="empColl" class="pkg5.ex1.EmpCollection">
+		<property name="empList">
+			<list>
+				<ref bean="emp1" />
+				<ref bean="emp2" />
+				<ref bean="emp3" />
+				</list>
+		</property>
+	</bean>
+	
+	<bean id="empColl1" class="pkg5.ex1.EmpCollection">
+		<property name="empList">
+			<list>
+				<ref bean="emp1" />
+				<ref bean="emp2" />
+				<ref bean="emp3" />
+				</list>
+		</property>
+	</bean>
+</beans>

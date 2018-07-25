@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Database connection -->
+<bean id="dataSource"
+	class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="url" value="jdbc:mysql://localhost/test"></property>
+	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	<property name="username" value="root"></property>
+	<property name="password" value="root"></property>
+</bean>
+
+<!--  obtain Session Factory without hibernate.cfg.xml use Annotations -->
+<bean id="sfBean" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="annotatedClasses">
+		<list>
+			<value>pkg1.hibernatewithspring.ex1.Employee</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!--  obtain hibernate template -->
+	<bean id="hibernateTemplateBean" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sfBean"/>		
+	</bean>
+	
+	<!--  create employee dao bean -->
+	<bean id="empDao" class="pkg1.hibernatewithspring.ex1.EmployeeDao">
+	<property name="hibernateTemplate" ref="hibernateTemplateBean"/>
+	</bean>
+</beans>

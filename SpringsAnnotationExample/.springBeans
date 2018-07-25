@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.9.2.201205070117-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/com/pack/AT/required/one/ATE1Bean.xml</config>
+		<config>src/com/pack/AT/required/one/ddd.xml</config>
+		<config>src/com/pack/AT/qualifier/three/ATE3Bean.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

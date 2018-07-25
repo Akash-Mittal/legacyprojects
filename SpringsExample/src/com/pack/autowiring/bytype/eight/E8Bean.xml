@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean name="e8b1" class="com.pack.autowiring.bytype.eight.Bean1" autowire-candidate="false">
+<property name="bean1"> <value>"This is Bean 1 - Auto Wiring By Type"</value></property>
+</bean>
+
+
+<bean name="e8b2" class="com.pack.autowiring.bytype.eight.Bean2">
+<property name="bean2"><value>"This is Bean 2 - AutoWiring By Type"</value></property>
+</bean>
+
+<bean name="bean8" class="com.pack.autowiring.bytype.eight.ExampleBean" autowire="byType" ></bean>
+
+
+</beans>

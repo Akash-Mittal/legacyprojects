@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="demo1.EmployeeImpl">
+		<property name="eid" value="A008"/>
+		<property name="name" value="ESG Kolkata" />
+		<property name="city" value="Kolkata" />
+		<property name="salary" value="33333" />
+	</bean>
+
+</beans>

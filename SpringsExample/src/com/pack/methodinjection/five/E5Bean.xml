@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="add5" class="com.pack.methodinjection.five.Address" scope="prototype">
+<property name="city" value="Ghaziabad"/>
+<property name="houseNumber" value="232"></property>
+</bean>
+
+<bean id="emp5" class="com.pack.methodinjection.five.Employee" scope="singleton">
+<property name="eName" value="Akash" />
+<lookup-method name="getAddress" bean="add5" />
+</bean>
+
+</beans>

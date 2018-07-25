@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="add4" class="com.pack.constructor.four.Address">
+<property name="city"><value>13131</value></property>
+<property name="pincode"><value>201001</value></property>
+</bean>
+
+<bean name="emp4" class="com.pack.constructor.four.Employee">
+<constructor-arg value="Akash"></constructor-arg>
+<constructor-arg value="79480"></constructor-arg>
+<constructor-arg ref="add4"></constructor-arg>
+</bean>
+
+<bean name="emp4.1" class="com.pack.constructor.four.Employee">
+<constructor-arg type="com.pack.constructor.four.Address" ref="add4"></constructor-arg>
+<constructor-arg type="java.lang.String" value="Akash"></constructor-arg>
+<constructor-arg type="int" value="79480"></constructor-arg>
+</bean>
+
+
+</beans>

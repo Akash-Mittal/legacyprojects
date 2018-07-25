@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<include file="struts1.xml"/>
+	<package name="default" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="Interceptor1" class="pkg1.Interceptor1" />
+		<interceptor name="Interceptor2" class="pkg1.Interceptor2" />
+			<interceptor-stack name="newStack">
+				<interceptor-ref name="Interceptor1" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="exception" />
+		</global-exception-mappings>
+
+		<action name="aliasing" class="pkg1.AliasAction">
+			<param name="aliases">#{ 'uname' : 'loginid','pwd' : 'password' }</param>
+			<interceptor-ref name="alias" />
+			<result name="success">/success.jsp</result>
+			<result name="error">/alias.jsp</result>
+			<result name="input">/alias.jsp</result>
+		</action>
+
+		<action name="modelAction" class="pkg1.ModelAction">
+			<interceptor-ref name="exception" />
+			<interceptor-ref name="prepare" />
+			<interceptor-ref name="debugging" />
+			<interceptor-ref name="modelDriven" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="conversionError" />
+			<interceptor-ref name="workflow" />
+			<result name="success">/student_info.jsp</result>
+			<result name="error">/model.jsp</result>
+			<result name="exception">/exception.jsp</result>
+			<result name="input">/model.jsp</result>
+		</action>
+
+		<action name="servletAction" class="pkg1.ServletAction">
+			<interceptor-ref name="servletConfig" />
+			<result name="success">/servlet_success.jsp</result>
+		</action>
+
+		<action name="scopedmodelAction" class="pkg1.ScopedModelAction">
+			<interceptor-ref name="prepare" />
+			<interceptor-ref name="debugging" />
+			<interceptor-ref name="scopedModelDriven">
+				<param name="scope">session</param>
+				<param name="name">student</param>
+				<param name="className">pkg1.Student</param>
+			</interceptor-ref>
+			<interceptor-ref name="params" />
+			<interceptor-ref name="conversionError" />
+			<interceptor-ref name="workflow" />
+			<result name="success">/scoped_student_info.jsp</result>
+		</action>
+
+		<action name="longAction" class="pkg1.LongAction">
+			<interceptor-ref name="completeStack" />
+			<interceptor-ref name="execAndWait">
+				<param name="delay">2000</param>
+				<param name="delaySleepInterval">50</param>
+			</interceptor-ref>
+			<result name="wait">/wait.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+
+		
+	</package>
+</struts>

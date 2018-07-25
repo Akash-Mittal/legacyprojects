@@ -1,0 +1,8 @@
+classes12.jar
+commons-logging-1.1.jar
+freemarker-2.3.8.jar
+lib.txt
+mysql-connector-java-5.1.7-bin.jar
+ognl-2.6.11.jar
+struts2-core-2.0.6.jar
+xwork-2.0.1.jar

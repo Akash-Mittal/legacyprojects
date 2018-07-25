@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="default" extends="struts-default">
+
+<action name="addClient" class="pkg1.action.AddClientAction">
+	<result name="success">client.jsp</result>
+	<result name="input">addclient.jsp</result>
+</action>
+
+<action name="addEmployee" class="pkg1.action.AddEmployeeAction">
+	<result name="success">employee.jsp</result>
+	<result name="input">addemployee.jsp</result>
+</action>
+
+<action name="changePassword" class="pkg1.action.ChangePasswordAction" >
+	<result name="input">changepassword.jsp</result>		
+	<result>changepassword-success.jsp</result>
+</action>
+
+<action name="login" class="pkg1.action.LoginAction">
+  <result name="input">login.jsp</result>
+  <result name="error">login.jsp</result>
+  <result name="success">login-success.jsp</result>
+</action>
+
+<action name="addUser" class="pkg1.action.AddUserAction">
+  <result name="input">register.jsp</result>
+  <result name="error">register.jsp</result>
+  <result name="success">register-success.jsp</result>
+</action>
+
+</package>
+</struts>

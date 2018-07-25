@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="b1" class="com.pack.autowiring.byname.seven.Bean1" >
+<property name="bean1"> <value>"This is Bean 1 - Auto Wiring By Name"</value></property>
+</bean>
+
+
+<bean name="b2" class="com.pack.autowiring.byname.seven.Bean2">
+<property name="bean2"><value>"This is Bean 2 - AutoWiring By Name"</value></property>
+</bean>
+
+<bean name="bean7" class="com.pack.autowiring.byname.seven.ExampleBean" autowire="byName"></bean>
+
+</beans>

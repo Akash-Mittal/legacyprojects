@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.pack.annotation.aspectj.BookBean" table="BOOKS">
+  <id name="bookId" column="BOOK_ID" type="integer" />
+<property name="bookName" column="BOOK_NAME" type="string"/>
+<property name="featured" column="BOOK_ISFEATURED" />
+  </class>
+</hibernate-mapping>

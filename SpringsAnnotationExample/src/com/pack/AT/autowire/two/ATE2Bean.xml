@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	default-autowire="default">
+
+<context:annotation-config></context:annotation-config>
+
+	<bean id="bookbean1" class="com.pack.AT.autowire.two.Book">
+		<property name="bookId" value="2121"></property>
+		<property name="bookName" value="Liferay in Action"></property>
+	</bean>
+	
+	
+		<bean id="bookbean2" class="com.pack.AT.autowire.two.Book">
+		<property name="bookId" value="4545"></property>
+		<property name="bookName" value="Springs in Action"></property>
+	</bean>
+	
+	<bean id="bookstorebean" class="com.pack.AT.autowire.two.BookStore" >
+	<property name="location" value="Idaho"></property>
+	<property name="name" value="K9 Store"></property>
+	</bean>
+</beans>

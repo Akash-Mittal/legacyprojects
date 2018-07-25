@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<context:annotation-config />
+<!-- Autowire -->
+	<bean id="add" class="pkg11.Address">
+		<property name="street" value="Sector-57" />
+		<property name="city" value="Noida" />
+		<property name="zip" value="1234567" />
+	</bean>
+
+	<bean id="emp" class="pkg11.Employee">
+		<property name="eid" value="A005" />
+		<property name="name" value="Subodh Kumar" />
+		<property name="salary" value="666666" />
+	</bean>
+<!-- end of autowire -->
+</beans>

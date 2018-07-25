@@ -1,0 +1,8 @@
+When a book is added and 
+
+it is out of capacity then send a mail to admin saying increase shelf
+
+
+After this application is running owner wants that whenever a featured book is added
+the website admin should know about it so that it can be added to website/
+or it should hit the database table to update the featured book table of website 

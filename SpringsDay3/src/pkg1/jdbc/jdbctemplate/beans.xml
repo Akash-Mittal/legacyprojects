@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--  Database connection -->
+<!-- 	<bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="url" value="jdbc:mysql://localhost/test"></property> -->
+<!-- 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property> -->
+<!-- 		<property name="username" value="root"></property> -->
+<!-- 		<property name="password" value="root"></property> -->
+<!-- 	</bean> -->
+	
+	
+	<bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xejdbc:oracle:thin:@localhost:1521:xejdbc:oracle:thin:@localhost:1521:xejdbc:oracle:thin:@localhost:1521:xejdbc:oracle:thin:@localhost:1521:xeoracle.jdbc.driver.OracleDriver"></property>
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="username" value="akash"></property>
+		<property name="password" value="akash"></property>>>>
+	</bean>
+	
+
+<!--  jdbc template injection -->
+	<bean id="jdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceBean"></property>
+	</bean>
+
+<!--  bean - EmployeeDao -->
+	<bean id="employeesDaoBean" class="pkg1.jdbc.jdbctemplate.EmployeesDao">
+		<property name="jdbcTemplate" ref="jdbcTemplateBean"></property>
+	</bean>
+	
+</beans>

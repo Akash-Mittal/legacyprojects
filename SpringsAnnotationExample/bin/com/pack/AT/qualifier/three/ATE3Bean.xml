@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">	
+
+<context:annotation-config></context:annotation-config>
+
+
+	
+	<bean id="ball1" class="com.pack.AT.qualifier.three.Ball">
+				<constructor-arg value="DummyBall" />
+				<constructor-arg value="Local" />
+				<constructor-arg value="150" /> 
+	</bean>
+	
+	
+	<bean id="ball2" class="com.pack.AT.qualifier.three.Ball">
+		<property name="ballComp" value="Finlity"/>
+		<property name="ballPrice" value="1200"/>
+		<property name="ballType" value="VolleyBall"></property>
+	</bean>
+
+	<bean id="bat1" class="com.pack.AT.qualifier.three.Bat" >
+				<constructor-arg value="DummyBat" />
+				<constructor-arg value="Local" />
+				<constructor-arg value="100" /> 
+	</bean>	
+	
+	<bean id="bat2" class="com.pack.AT.qualifier.three.Bat" >
+	<property name="batComp" value="MRF"></property>
+	<property name="batPrice" value="600"></property>
+	<property name="batType" value="Circket Bat"></property>
+	</bean>
+	
+	
+	<bean name="shopBean" class="com.pack.AT.qualifier.three.SportShop"  />
+	
+</beans>

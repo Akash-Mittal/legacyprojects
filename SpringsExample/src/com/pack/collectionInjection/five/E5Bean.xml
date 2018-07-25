@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="coll5" class="com.pack.collectionInjection.five.CollectionBean">
+<property name="pricesMap">
+<map>
+<entry key="bike" value="50000"></entry>
+<entry key="car" value="250000"></entry>
+</map>
+</property>
+
+<property name="productList">
+<list>
+<value>car</value>
+<value>bike</value>
+
+</list>
+
+</property>
+
+
+<property name="productSet">
+<set>
+<value>Akash</value>
+<value>Choudhary</value>
+</set>
+</property>
+
+<property name="description">
+<props>
+		<prop key="CAR">It is Description of CAR</prop>
+		<prop key="MOTORCYCLE">It is Description of MOTORCYCLE</prop>
+		<prop key="SCOOTER">It is Description of SCOOTER</prop>
+
+</props>
+</property>
+
+</bean>
+
+
+</beans>

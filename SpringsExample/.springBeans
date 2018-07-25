@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.9.2.201205070117-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/com/pack/one/E1Bean1.xml</config>
+		<config>src/com/pack/two/E2Bean.xml</config>
+		<config>src/com/pack/three/E3Bean.xml</config>
+		<config>src/com/pack/constructor/four/E4Bean.xml</config>
+		<config>src/com/pack/methodinjection/five/E5Bean.xml</config>
+		<config>src/com/pack/collectionInjection/five/E5Bean.xml</config>
+		<config>src/com/pack/collectionInjection/five/one/E5.1Bean.xml</config>
+		<config>src/com/pack/autowiring/byname/seven/E7Bean.xml</config>
+		<config>src/com/pack/autowiring/bytype/eight/E8Bean.xml</config>
+		<config>src/com/pack/staticInjection/six/E6Bean.xml</config>
+		<config>src/com/pack/NonstaticInjection/six/one/E6.1Bean.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

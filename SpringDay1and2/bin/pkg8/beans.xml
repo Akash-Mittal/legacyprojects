@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="emp1" class="pkg8.Employee1" lazy-init="true">
+		<property name="eid">
+			<value>A001</value>
+		</property>
+		<property name="name">
+			<value>Subodh Sharma</value>
+		</property>
+		<property name="city" value="Noida" />
+		<property name="salary" value="999999" />
+	</bean>
+
+
+<bean id="emp2" class="pkg8.Employee2" init-method="init" destroy-method="destroy" lazy-init="true">
+		<property name="eid">
+			<value>A002</value>
+		</property>
+		<property name="name">
+			<value>Suman Sharma</value>
+		</property>
+		<property name="city" value="Noida" />
+		<property name="salary" value="999999" />
+	</bean>
+
+</beans>
